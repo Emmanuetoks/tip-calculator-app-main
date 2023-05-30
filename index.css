@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  --clr-primary-100: hsl(0, 0%, 100%);
+  --clr-primary-200: hsl(172, 67%, 45%);
+
+  --clr-neutral-100: hsl(183, 100%, 15%);
+  --clr-neutral-200: hsl(186, 14%, 43%);
+  --clr-neutral-300: hsl(184, 14%, 56%);
+  --clr-neutral-400: hsl(185, 41%, 84%);
+  --clr-neutral-500: hsl(189, 41%, 97%);
+}
+
+/* CSS RESETS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: inherit;
+  outline: 0 solid transparent;
+  border: 0 solid transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: 100dvh;
+  gap: 0;
+  font-family: "Space Mono", monospace;
+}
+
+header {
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+input {
+  width: 100%;
+  text-align: right;
+  padding: 0.2rem;
+  outline: 0 solid transparent;
+  border: 0 solid transparent;
+}
+
+/*--- Utility Classes ---*/
+.bg-white {
+  background-color: var(--clr-primary-100);
+}
+
+.bg-body {
+  background-color: var(--clr-neutral-400);
+}
+
+.bg-dark-green {
+  background-color: var(--clr-neutral-100);
+}
+
+.bg-light-green {
+  background-color: var(--clr-primary-200);
+}
+
+.text-accent-100 {
+  color: var(--clr-primary-100);
+}
+
+.text-accent-200 {
+  color: var(--clr-neutral-300);
+}
+
+.text-accent-300 {
+  color: var(--clr-primary-200);
+}
+
+.text-accent-400 {
+  color: var(--clr-neutral-100);
+}
+
+.fs-100 {
+  font-size: 0.75rem;
+}
+
+.fs-200 {
+  font-size: 0.75rem;
+}
+
+.fs-400 {
+  font-size: 1.5rem;
+}
+
+.fw-400 {
+  font-weight: 700;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.center-self {
+  place-self: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-abs {
+  position: absolute;
+}
+/* -------------------- */
+
+/*--- COMPONENTS STYLING ---*/
+.main {
+  padding: 1em;
+  gap: 2rem;
+  border-radius: 10px;
+}
+
+.main > section {
+  min-width: 20rem;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.main__left {
+  gap: 1rem;
+}
+
+.main__input-box {
+  background-color: var(--clr-neutral-500);
+  padding: 7px;
+  font-family: inherit;
+  border-radius: 3px;
+  font-weight: 700;
+}
+
+.main__input-box:hover {
+  outline: 2px solid var(--clr-primary-200);
+}
+
+.main__input-box:focus {
+  outline: 2px solid var(--clr-primary-200);
+  
+}
+
+.main__tip-percentage {
+  grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+  grid-auto-rows: 2rem;
+  gap: 1rem;
+}
+
+.main__tip-percentage > .tip {
+  border-radius: 5px;
+}
+
+.main__right {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main__reset-btn {
+  padding: 0.4rem;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.main__reset-btn:hover {
+  background-color: var(--clr-neutral-400);
+}
+
+.main__left > :nth-child(1) > :first-child,
+.main__left > :nth-child(2) > :first-child,
+.main__left > :nth-child(3) > :first-child {
+  margin-bottom: 5px;
+}
+
+.main__result {
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 1rem;
+}
+
+.main__btn:hover {
+  background-color: var(--clr-primary-200);
+  color: var(--clr-neutral-100);
+}
+
+.main__input-icon {
+  bottom: 0;
+  left: 5px;
+  transform: translateY(-10%);
+}
+
+.price-per-person {
+  width: rem;
+}
+
+#customTip {
+  text-align: center;
+}
+
+#customTip:focus {
+  text-align: right;
+}
+
+/* -----JS trigerred classes ----*/
+.clicked {
+  background-color: var(--clr-primary-200);
+  color: var(--clr-neutral-100);
+}
+
+.zero-people-error {
+  outline: 2px solid red;
+}
+
+.error-msg {
+  color: red;
+  visibility:hidden;
+}
+
+/* ----------- */
+
+/* ------------------------ */
+
+/*--- MEDIA QUERIES ---*/
+@media (max-width: 600px) {
+  .main {
+    flex-direction: column;
+  }
+}

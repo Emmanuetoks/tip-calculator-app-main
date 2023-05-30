@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body class="grid bg-body">
+    <div class="center-self" style="margin-block-start: 2rem
+    ;">
+      <header class="flex">
+        <img src="./images/logo.svg" alt="logo" class="logo" />
+      </header>
+      <main class="main cente-self flex bg-white">
+        <!-- <header>splitter</header> -->
+        <section class="main__left flex flex-col">
+          <div class="main__bill pos-rel">
+            <p class="text-accent-200 fs-200">Bill</p>
+            <span class="main__input-icon pos-abs">
+              <img src="./images/icon-dollar.svg" />
+            </span>
+            <input
+              class="text-accent-400 main__input-box fw-400"
+              placeholder="0"
+              id="bill"
+            />
+          </div>
+
+          <div class="">
+            <p class="text-accent-200 fs-200" class="capitalize">select tip</p>
+            <div class="main__tip-percentage grid">
+              <button
+                class="text-accent-100 main__btn bg-dark-green tip fw-400"
+                value="5"
+              >
+                5%
+              </button>
+              <button
+                class="text-accent-100 main__btn bg-dark-green tip fw-400"
+                value="10"
+              >
+                10%
+              </button>
+              <button
+                class="text-accent-100 main__btn bg-dark-green tip fw-400"
+                value="15"
+              >
+                15%
+              </button>
+              <button
+                class="text-accent-100 main__btn bg-dark-green tip fw-400"
+                value="25"
+              >
+                25%
+              </button>
+              <button
+                value="50"
+                class="text-accent-100 main__btn bg-dark-green tip fw-400"
+              >
+                50%
+              </button>
+
+              <input
+                class="text-accent-400 main__input-box"
+                fw-400
+                id="customTip"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+
+          <div class="main__number-of-people pos-rel">
+            <p style="justify-content: space-between;" class="flex text-accent-200 fs-200">
+              Number of People
+              <span id="errorMsg" class="error-msg"
+                >Can&nbsp;t be zero
+              </span>  
+            </p>
+            <span class="main__input-icon pos-abs">
+              <img src="./images/icon-person.svg" />
+            </span>
+            <input
+              class="text-accent-400 main__input-box fw-400"
+              placeholder="0"
+              id="numOfPeople"
+            />
+          </div>
+        </section>
+
+        <section class="main__right bg-dark-green flex">
+          <div>
+            <div class="main__result flex">
+              <h6 class="price-per-person text-accent-100">
+                Tip Amount
+                <br />
+                <span class="text-accent-200 fs-100 fs-200">/person</span>
+              </h6>
+              <p class="text-accent-300 fs-400 fw-400" id="tipPerPerson">
+                $0.00
+              </p>
+            </div>
+
+            <div class="main__result flex">
+              <h5 class="price-per-person text-accent-100">
+                Total
+                <br />
+                <span class="text-accent-200 fs-100 fs-200">/person</span>
+              </h5>
+              <p class="text-accent-300 fs-400 fw-400" id="totalPerPerson">
+                $0.00
+              </p>
+            </div>
+          </div>
+
+          <button
+            id="resetBtn"
+            class="bg-light-green text-accent-400 main__reset-btn"
+          >
+            <span class="uppercase fw-400">reset</span>
+          </button>
+        </section>
+      </main>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
